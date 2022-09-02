@@ -8,7 +8,7 @@ description: "Azure Managed Instance for Apache Cassandra provides automated dep
 urlFragment: azure-cassandra-mi-java-v4-getting-started
 ---
 
-# Developing a Java app using Azure Managd Instance for Apache Cassandra (v4.x Driver).
+# Developing a Java app using Azure Managed Instance for Apache Cassandra (v4.x Driver).
 Azure Managed Instance for Apache Cassandra provides automated deployment and scaling operations for managed open-source Apache Cassandra datacenters. It accelerates hybrid scenarios and reduces ongoing maintenance.
 
 This quick start demonstrates how to connect to a Cassandra Managed instance cluster. You'll then build a user profile console app, output as shown in the following image, with sample data.
