@@ -4,8 +4,8 @@ languages:
 - java
 products:
 - azure
-description: "Azure Cosmos DB is a globally distributed multi-model database. One of the supported APIs is the Cassandra API"
-urlFragment: azure-cosmos-db-cassandra-java-getting-started-v4
+description: "Azure Managed Instance for Apache Cassandra provides automated deployment and scaling operations for managed open-source Apache Cassandra datacenters"
+urlFragment: azure-cassandra-mi-java-v4-getting-started
 ---
 
 # Developing a Java app using Azure Managd Instance for Apache Cassandra (v4.x Driver).
