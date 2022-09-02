@@ -1,57 +1,43 @@
-# Project Name
+---
+page_type: sample
+languages:
+- java
+products:
+- azure
+description: "Azure Cosmos DB is a globally distributed multi-model database. One of the supported APIs is the Cassandra API"
+urlFragment: azure-cosmos-db-cassandra-java-getting-started-v4
+---
 
-(short, 1-3 sentenced, description of the project)
+# Developing a Java app using Azure Managd Instance for Apache Cassandra (v4.x Driver).
+Azure Managed Instance for Apache Cassandra provides automated deployment and scaling operations for managed open-source Apache Cassandra datacenters. It accelerates hybrid scenarios and reduces ongoing maintenance.
 
-## Features
+This quick start demonstrates how to connect to a Cassandra Managed instance cluster. You'll then build a user profile console app, output as shown in the following image, with sample data.
 
-This project framework provides the following features:
+## Prerequisites
+* Before you can run this sample, you must have the following prerequisites:
+    * An Azure Managed Instance for Apache Cassandra cluster. Check out our Quickstart guide [here](https://docs.microsoft.com/azure/managed-instance-apache-cassandra/create-cluster-portal).
+    * Networking access from this application to your Azure Managed Instance for Apache Cassandra cluster (the service only deploys private IP addresses injected into a Virtual network).
+    * [Java Development Kit (JDK) 1.8+](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+        * On Ubuntu, run `apt-get install default-jdk` to install the JDK.
+    * Be sure to set the JAVA_HOME environment variable to point to the folder where the JDK is installed.
+    * [Download](http://maven.apache.org/download.cgi) and [install](http://maven.apache.org/install.html) a [Maven](http://maven.apache.org/) binary archive
+        * On Ubuntu, you can run `apt-get install maven` to install Maven.
+    * [Git](https://www.git-scm.com/)
+        * On Ubuntu, you can run `sudo apt-get install git` to install Git.
 
-* Feature 1
-* Feature 2
-* ...
+## Running this sample
+1. Clone this repository using `git clone https://github.com/Azure-Samples/azure-cassandra-mi-java-v4-getting-started`.
 
-## Getting Started
+3. Update parameters in `src/main/resources/application.conf`: 
+    1. Enter the datacenter name in the `DC` field.
+    1. Enter `username` and `password` in `datastax-java-driver.advanced.auth-provider` section, and the IP addresses of your cluster seed nodes in `datastax-java-driver.basic.contact-points`.
 
-### Prerequisites
+5. Run `mvn clean package` from the top level folder to build the project. This will generate `cassandrami-examples.jar` under target folder.
+ 
+6. Run `java -cp target/cassandrami-examples.jar com.azure.cassandrami.examples.UserProfile` in a terminal to start your java application.
+   ![Console output](./media/output.png)
 
-(ideally very short, if any)
-
-- OS
-- Library version
-- ...
-
-### Installation
-
-(ideally very short)
-
-- npm install [package name]
-- mvn install
-- ...
-
-### Quickstart
-(Add steps to get up and running quickly)
-
-1. git clone [repository clone url]
-2. cd [repository name]
-3. ...
+## About the code
+The code included in this sample is intended to get you quickly started with a Java command line application that connects to Azure Managed Instance for Apache Cassandra.
 
 
-## Demo
-
-A demo app is included to show how to use the project.
-
-To run the demo, follow these steps:
-
-(Add steps to start up the demo)
-
-1.
-2.
-3.
-
-## Resources
-
-(Any additional resources or related projects)
-
-- Link to supporting information
-- Link to similar sample
-- ...
